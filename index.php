@@ -23,8 +23,8 @@
                     <li v-for="task in tasks"> {{task}}</li>
                 </ul>
                 <form class="d-flex" action="server.php" method="post">
-                    <input type="text" name="newTask" id="newTask">
-                    <button class="btn btn-primary" type="submit">Add</button>
+                    <input type="text" name="newTask" id="newTask" v-model="task">
+                    <button class="btn btn-primary" type="submit" @click="callApiPost(this.api_url, this.task)">Add</button>
                 </form>
             </main>
         </div>

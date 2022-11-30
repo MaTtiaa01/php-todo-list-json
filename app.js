@@ -23,7 +23,7 @@ createApp({
 
         callApiPost(url, myVar) {
             const data = {
-                myPostParam: myVar
+                task: myVar
             }
             axios
                 .post(url, data, {
