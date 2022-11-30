@@ -31,7 +31,7 @@ createApp({
                 })
                 .then(response => {
                     console.log(response);
-                    this.tasks = response.data
+                    this.task = response.data
                 })
                 .catch(err => {
                     console.error(err);

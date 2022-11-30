@@ -22,7 +22,10 @@
                 <ul>
                     <li v-for="task in tasks"> {{task}}</li>
                 </ul>
-                form
+                <form class="d-flex" action="server.php" method="post">
+                    <input type="text" name="newTask" id="newTask">
+                    <button class="btn btn-primary" type="submit">Add</button>
+                </form>
             </main>
         </div>
     </div>
