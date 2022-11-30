@@ -3,7 +3,7 @@ import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
 createApp({
     data() {
         return {
-            api_url: "file.json",
+            api_url: "server.php",
             tasks: [],
             task: ''
         }
@@ -21,17 +21,18 @@ createApp({
                 })
         },
 
-        callApiPost(url, myVar) {
+        callApiPost() {
             const data = {
-                task: myVar
+                task: this.task
             }
             axios
-                .post(url, data, {
+                .post(this.api_url, data, {
                     headers: { 'Content-type': 'multipart/form-data' }
                 })
                 .then(response => {
                     console.log(response);
-                    this.task = response.data
+                    this.tasks = response.data
+                    this.task = ""
                 })
                 .catch(err => {
                     console.error(err);

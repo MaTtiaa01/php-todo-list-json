@@ -9,10 +9,10 @@ $tasksArray = json_decode($tasksString);
 //var_dump($tasksArray);
 
 
-if (isset($_POST['newTask'])) {
+if (isset($_POST['task'])) {
 
-    $newTask = $_POST['newTask'];
-    var_dump($newTask);
+    $newTask = $_POST['task'];
+    //var_dump($newTask);
 
     array_push($tasksArray, $newTask);
 
