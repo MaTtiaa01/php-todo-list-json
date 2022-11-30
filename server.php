@@ -1,7 +1,11 @@
 <?php
 
-$tasksString = file_get_contents('file.json');
+$tasks = [
+    "html",
+    "css",
+    "javascript",
+    "php"
+];
 
-$tasksArray = json_decode($tasksString);
-
-echo $tasksArray;
+header('Content-Type: application/json');
+echo json_encode($tasks);
