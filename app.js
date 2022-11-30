@@ -9,7 +9,19 @@ createApp({
         }
     },
     methods: {
-        callApi(url, myVar) {
+        callApiGet(url) {
+            axios
+                .get(url)
+                .then(response => {
+                    console.log(response);
+                    this.tasks = response.data
+                })
+                .catch(err => {
+                    console.error(err);
+                })
+        },
+
+        callApiPost(url, myVar) {
             const data = {
                 myPostParam: myVar
             }
@@ -27,6 +39,6 @@ createApp({
         }
     },
     mounted() {
-        this.callApi(this.api_url, this.task)
+        this.callApiGet(this.api_url)
     }
 }).mount('#app')
