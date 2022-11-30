@@ -16,15 +16,18 @@
 
 <body>
     <div id="app">
-        <div class="container py-4">
+        <div class="container py-4 ">
             <h1 class="text-uppercase text-center">to do list</h1>
-            <main>
-                <ul>
-                    <li v-for="task in tasks"> {{task}}</li>
-                </ul>
-                <div class="d-flex">
-                    <input type="text" name="newTask" id="newTask" v-model="task">
-                    <button class="btn btn-primary" type="submit" @click="callApiPost()">Add</button>
+            <main class="d-flex flex-column align-items-center row">
+                <div class="col-4 bg-dark text-white p-4">
+                    <ul class="">
+                        <li class="bg-secondary border py-2 text-center fs-4" v-for="task in tasks"> {{task}}</li>
+                    </ul>
+                    <div class="d-flex justify-content-between mt-3">
+                        <input type="text" name="newTask" id="newTask" v-model="task">
+                        <button class="btn btn-primary" type="submit" @click="callApiPost()">Add</button>
+                    </div>
+
                 </div>
             </main>
         </div>
