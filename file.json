@@ -2,5 +2,6 @@
     "html",
     "css",
     "javascript",
-    "php"
+    "php",
+    "laravel"
 ]

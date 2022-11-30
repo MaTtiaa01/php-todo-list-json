@@ -3,7 +3,7 @@ import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
 createApp({
     data() {
         return {
-            api_url: "server.php",
+            api_url: "file.json",
             tasks: [],
             task: ''
         }
